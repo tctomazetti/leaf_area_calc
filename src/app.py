@@ -1,66 +1,59 @@
-import json
 import streamlit as st
+from utils import load_model_info, get_model_parameters, get_terms, calculate_leaf_area
 
-# Função para carregar modelos de um arquivo JSON
-def load_models(json_file):
-    with open(json_file, 'r') as file:
-        data = json.load(file)
-    return data
 
-# Caminho para o arquivo JSON
-models_file = 'src/data/models.json'
+MODEL_INFO = load_model_info()
+SPECIES_LIST = list(MODEL_INFO.keys())
 
-# Carregar dados de modelos
-data = load_models(models_file)
+specie = st.selectbox('Select species', SPECIES_LIST, index=None)
 
-# Obter lista de espécies
-species_list = list(data.keys())
+# Select the variety according with teh specie
+if specie is not None:
+    varieties = list(MODEL_INFO[specie].keys())
+    variety = st.selectbox('Select variety', varieties, index=None)
+else:
+    st.selectbox('Select variety', [], index=None, disabled=True, key='disabled_variety')
+    st.info('Please select a species first to enable variety selection.')
+    variety = None
 
-# Selecionar uma espécie
-species = st.selectbox('Select species', species_list)
+# Select the feature measure according with the variety
+if variety is not None:
+    feature_measure = list(MODEL_INFO[specie][variety].keys())
+    feature_measure = st.selectbox('Select feature', feature_measure, index=None)
+else:
+    st.selectbox('Select feature', [], index=None, disabled=True, key='disabled_feature')
+    st.info('Please select a variety first to enable feature selection.')
+    feature_measure = None
 
-# Obter lista de variedades para a espécie selecionada
-varieties = list(data[species].keys())
+# Select the model_cod according with the feature_measure
+if feature_measure is not None:
+    models_cod = list(MODEL_INFO[specie][variety][feature_measure].keys())
+    model_cod = st.selectbox('Select model', models_cod, index=None)
+else:
+    st.selectbox('Select model', [], index=None, disabled=True, key='disabled_model')
+    model_cod = None
 
-# Selecionar uma variedade
-variety = st.selectbox('Select variety', varieties)
+if model_cod is not None:
+    model_parameters = get_model_parameters(MODEL_INFO, specie, variety, feature_measure, model_cod)
+    terms = get_terms(model_parameters)
 
-# Obter modelos disponíveis para a variedade selecionada
-models_for_variety = data[species][variety]
+    # Print the selected model description
+    model_formula = model_parameters["model"]["formula"]
+    model_description = model_parameters["description"]
+    model_citation = model_parameters["citation_cod"]
 
-# Se existir mais de um modelo, permitir seleção
-model_names = list(models_for_variety.keys())
-selected_model = st.selectbox('Select model', model_names)
+    st.write(f"Model formula: {model_formula}")
+    st.write(f"Model description: {model_description}")
+    st.write(f"Model citation: {model_citation}")
 
-# Exibir a fórmula e descrição do modelo selecionado
-model_info = models_for_variety[selected_model]
-model_formula = model_info.get('model', 'Model not available')
-model_description = model_info.get('description', 'Description not available')
+    # Input user data
+    st.subheader('Enter the data required by the model')
+    L = st.number_input('Leaf length (L)', min_value=0.0, step=0.1)
+    W = st.number_input('Leaf width (W)', min_value=0.0, step=0.1)
+    aLV = st.number_input('Average length of lateral veins (aLV)', min_value=0.0, step=0.1)
 
-st.write(f'Model formula: {model_formula}')
-st.write(f'Model description: {model_description}')
-
-# Função para calcular a área foliar
-def calculate_leaf_area(L, W, aLV):
-    if model_formula:
-        # Executa a expressão do modelo usando os valores L, W e aLV
-        try:
-            LA = eval(model_formula, {"L": L, "W": W, "aLV": aLV})
-            return LA
-        except Exception as e:
-            st.error(f"Error calculating leaf area: {e}")
-    else:
-        st.error('No model formula available for the selected model')
-    return None
-
-# Entrada de dados do usuário
-st.subheader('Enter the data required by the model')
-L = st.number_input('Leaf length (L)', min_value=0.0, step=0.1)
-W = st.number_input('Leaf width (W)', min_value=0.0, step=0.1)
-aLV = st.number_input('Average length of lateral veins (aLV)', min_value=0.0, step=0.1)
-
-# Calcular área foliar
-if st.button('Calculate Leaf Area'):
-    area = calculate_leaf_area(L, W, aLV)
-    if area is not None:
-        st.success(f'The estimated leaf area is {area:.2f} cm²')
+    # Leaf area calculator
+    if st.button('Calculate Leaf Area'):
+        area = calculate_leaf_area(L, terms)
+        if area is not None:
+            st.success(f'The estimated leaf area is {area:.2f} cm²')

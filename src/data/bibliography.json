@@ -1,0 +1,61 @@
+{
+    "tomazetti_et_al_2024": {
+        "title": "Exploring phenotypic plasticity leaf trait relationships in fungal-resistant grapevines using linear regression: Implications of the genotype environment interaction",
+        "authors": [
+            "Tiago Camponogara Tomazetti",
+            "Márcia Denise Rossarola",
+            "Alberto Fontanela Brighenti",
+            "Lirio Luiz dal Vesco",
+            "André Kulkamp de Souza",
+            "Emílio dela Bruna",
+            "Marco Stefanini",
+            "Oliver Trapp",
+            "José Afonso Voltolini",
+            "Aparecido Lima da Silva",
+            "Leocir José Welter"
+        ],
+        "year": 2024,
+        "models": {
+            "grapevine": [
+                "Aromera",
+                "Baron",
+                "Bronner",
+                "Calandro",
+                "Calardis Blanc",
+                "Felicia",
+                "ABS15",
+                "ABS24",
+                "Helios",
+                "Prior",
+                "Regent"
+            ]
+        },
+        "url": "https://ojs.openagrar.de/volltexte/VITIS/2024/15583_vitis_2024-01_tomazetti_et_al/15583_vitis_2024-01_tomazetti_et_al.html",
+        "DOI": "https://dx.doi.org/10.5073/vitis.2024.63.08",
+        "file": "tomazetti_et_al_2024",
+        "description": "The study developed and compared eight linear regression models to predict leaf area (LA) in fungal-resistant grapevine genotypes. Genotype significantly influenced leaf shape, and genotype-environment interaction was observed. The research aids in developing non-destructive, automated vineyard monitoring techniques."
+    },
+    "sautchuck_et_al_2024": {
+        "title": "Mathematical models to estimate leaf area of grapevine varieties Chardonnay, Marselan and Pinot Noir",
+        "authors": [
+            "Sabrina Sautchuk1",
+            "Alberto Fontanella Brighenti",
+            "Tiago Camponogara Tomazetti",
+            "Thainá Carolina Graciano Votre",
+            "Jackson Felipe Cardoso",
+            "Aparecido Lima da Silva"
+        ],
+        "year": 2024,
+        "models": {
+            "grapevine": [
+                "Chardonnay",
+                "Marselan",
+                "Pinot Noir"
+            ]
+        },
+        "url": "https://www.scielo.br/j/rbf/a/w5HW8Qtm8wmjLq55LVwCJwg/?format=pdf&lang=en",
+        "DOI": "https://dx.doi.org/10.1590/0100-29452024957",
+        "file": "sautchuk_et_al_2024",
+        "description": "The study developed mathematical models to estimate leaf area in three grapevine cultivars ('Chardonnay', 'Marselan', 'Pinot Noir') grown under plastic covers in Brazil. Using linear regression, the best model used the sum of secondary veins squared as a predictor, offering accurate estimations for growers."
+    }
+}

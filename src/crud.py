@@ -1,10 +1,10 @@
 import json
 import os
 
-# Caminho para o arquivo JSON
+# path to json models
 models_file = 'src/data/models.json'
 
-def load_data(file_path):
+def load_data(file_path: str) -> dict[str, any]:
     """Carrega os dados do arquivo JSON."""
     if not os.path.exists(file_path):
         return {}
