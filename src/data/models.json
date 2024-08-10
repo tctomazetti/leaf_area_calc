@@ -1,0 +1,51 @@
+{
+    "grapevine (Vitis vinifera)": {
+        "Aromera": {
+            "model_1": {
+                "model": "0.99 * L * W + 2.76",
+                "description": "Simple linear model using length and width",
+                "citation": "Tomazetti et al. (2024)"
+            },
+            "model_2": {
+                "model": "",
+                "description": "",
+                "citation": "Tomazetti et al. (2024)"
+            }
+        },
+        "Baron": {
+            "model_1": {
+                "model": "0.24 * L^2 + 0.32 * W^2 + 0.47 * aLV^2 + 1.85",
+                "description": "Multiple linear model using length, width, and average lateral vein length",
+                "citation": "Tomazetti et al. (2024)"
+            }
+        },
+        "Bronner": {
+            "model_1": {
+                "model": "0.44 * L^2 + 0.30 * W^2 + 0.46 * aLV^2 + 0.12",
+                "description": "Multiple linear model using length, width, and average lateral vein length",
+                "citation": "Tomazetti et al. (2024)"
+            }
+        }
+    },
+    "apple (Malus domestica)": {
+        "variety_a": {
+            "model_1": {
+                "model": "",
+                "description": "Simple linear model using length and width",
+                "citation": ""
+            },
+            "model_2": {
+                "model": "",
+                "description": "",
+                "citation": ""
+            }
+        },
+        "variety_b": {
+            "model_1": {
+                "model": "",
+                "description": "Multiple linear model using length, width, and average lateral vein length",
+                "citation": ""
+            }
+        }
+    }
+}
