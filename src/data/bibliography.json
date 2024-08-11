@@ -32,7 +32,7 @@
         },
         "url": "https://ojs.openagrar.de/volltexte/VITIS/2024/15583_vitis_2024-01_tomazetti_et_al/15583_vitis_2024-01_tomazetti_et_al.html",
         "DOI": "https://dx.doi.org/10.5073/vitis.2024.63.08",
-        "file": "tomazetti_et_al_2024",
+        "file": "tomazetti_et_al_2024.pdf",
         "description": "The study developed and compared eight linear regression models to predict leaf area (LA) in fungal-resistant grapevine genotypes. Genotype significantly influenced leaf shape, and genotype-environment interaction was observed. The research aids in developing non-destructive, automated vineyard monitoring techniques."
     },
     "sautchuck_et_al_2024": {
@@ -55,7 +55,7 @@
         },
         "url": "https://www.scielo.br/j/rbf/a/w5HW8Qtm8wmjLq55LVwCJwg/?format=pdf&lang=en",
         "DOI": "https://dx.doi.org/10.1590/0100-29452024957",
-        "file": "sautchuk_et_al_2024",
+        "file": "sautchuk_et_al_2024.pdf",
         "description": "The study developed mathematical models to estimate leaf area in three grapevine cultivars ('Chardonnay', 'Marselan', 'Pinot Noir') grown under plastic covers in Brazil. Using linear regression, the best model used the sum of secondary veins squared as a predictor, offering accurate estimations for growers."
     }
 }

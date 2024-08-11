@@ -1,9 +1,12 @@
 import streamlit as st
-from utils import load_model_info, get_model_parameters, get_terms, calculate_leaf_area
+from utils import load_model_info, load_bibliography_info, get_model_parameters, get_terms, calculate_leaf_area
+from app_tools import load_citation
 
 
 MODEL_INFO = load_model_info()
 SPECIES_LIST = list(MODEL_INFO.keys())
+
+BIBLIOGRAPHY_INFO = load_bibliography_info()
 
 specie = st.selectbox('Select species', SPECIES_LIST, index=None)
 
@@ -38,13 +41,7 @@ if model_cod is not None:
     terms = get_terms(model_parameters)
 
     # Print the selected model description
-    model_formula = model_parameters["model"]["formula"]
-    model_description = model_parameters["description"]
-    model_citation = model_parameters["citation_cod"]
-
-    st.write(f"Model formula: {model_formula}")
-    st.write(f"Model description: {model_description}")
-    st.write(f"Model citation: {model_citation}")
+    load_citation(model_parameters)
 
     # Input user data
     st.subheader('Enter the data required by the model')

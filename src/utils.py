@@ -1,9 +1,15 @@
 import json
-from paths import MODELS_FILE
+from paths import MODELS_FILE, BIBLIOGRAPHY_FILE, BIBLIOGRAPHY_DIR
+from pathlib import Path
 
 
 def load_model_info() -> dict[str, any]:
     with open(MODELS_FILE) as json_file:
+        return json.load(json_file)
+
+
+def load_bibliography_info() -> dict[str, any]:
+    with open(BIBLIOGRAPHY_FILE) as json_file:
         return json.load(json_file)
 
 
@@ -25,3 +31,20 @@ def calculate_leaf_area(value: float, terms: list[dict[str, any]]) -> float:
         elif term["term"] == "constant":
             result += term["coefficient"]
     return round(result, 2) if result > 0 else 0
+
+
+class Citation:
+    def __init__(self, model_citation: str) -> None:
+        bibliography = load_bibliography_info()
+        citation = bibliography.get(model_citation, "No available bibliography")
+        self.name = model_citation
+        self.title = citation["title"]
+        self.url = citation["url"]
+        self.pdf_file = self._get_pdf_path(citation["file"])
+    
+
+    def _get_pdf_path(self, name: str) -> Path | None:
+        if len(name) == 0:
+            return None
+        return BIBLIOGRAPHY_DIR / name
+    
