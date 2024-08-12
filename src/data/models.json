@@ -95,7 +95,7 @@
             "leaf_mlr": {
                 "model_1": {
                     "model": {
-                        "formula": "LA = 0 * L^2 + 0 * W2 + 0 * alv^2 + 0",
+                        "formula": "LA = 0.314 * L^2 + 0.315 * W2 + 0.555 * alv^2 + 1.591",
                         "terms": [
                             {"coefficient": 0.314, "term": "l^2"},
                             {"coefficient": 0.315, "term": "w^2"},
@@ -1193,22 +1193,15 @@
             "leaf_length": {
                 "model_1": {
                     "model": {
-                        "formula": "LA = 0 * L + 0",
+                        "formula": "LA = b * L + a",
                         "terms": [
                             {"coefficient": 0, "term": "x"},
                             {"coefficient": 0, "term": "constant"}
                         ]
                     },
                     "description": "Simple linear model using leaf length",
-                    "citation_cod": "tomazetti_et_al_2024"
+                    "citation_cod": "reference_here"
                 }
-            }
-        },
-        "variety_b": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation_cod": ""
             }
         }
     }

@@ -8,7 +8,7 @@ PYTHON = $(VENV_DIR)/bin/python
 STREAMLIT = $(VENV_DIR)/bin/streamlit
 
 # Name of the main Streamlit application file
-APP = src/app.py
+APP = src/main.py
 
 # Command to run the Streamlit application
 run:

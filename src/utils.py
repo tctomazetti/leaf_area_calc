@@ -21,36 +21,54 @@ def get_terms(parameters: dict[str, any]) -> list[dict[str, any]]:
     return parameters["model"]["terms"]
 
 
-def calculate_leaf_area(value: float, terms: list[dict[str, any]]) -> float:
+def simple_reg_calc(x_value: float, terms: list[dict[str, any]]) -> float:
     result = 0
     for term in terms:
         if term["term"] == "x":
-            result += term["coefficient"] * value
+            result += term["coefficient"] * x_value
         elif term["term"] == "x^2":
-            result += term["coefficient"] * (value ** 2)
+            result += term["coefficient"] * (x_value ** 2)
         elif term["term"] == "constant":
             result += term["coefficient"]
     return round(result, 2) if result > 0 else 0
 
 
-def mlr_calc(length: float, width: float, lv_right: float, lv_left: float, terms: list[dict[str, any]]) -> float:
-    alv = (lv_right + lv_left) / 2
+class Leaf:
+    def __init__(self, length: float | None, width: float | None, right_lv: float | None, left_lv: float | None) -> None:
+        self.length = length
+        self.width = width
+        self.right_lv = right_lv
+        self.left_lv = left_lv
+        self.alv = self._calc_alv()
+
+    def _calc_alv(self) -> float | None:
+        if self.right_lv is None or self.left_lv is None:
+            return None
+        return round((self.right_lv + self.left_lv) / 2, 2)
+    
+    def calc_ldi(self) -> float | None:
+        if self.alv is None or self.alv == 0:
+            return None
+        return round((abs(self.right_lv - self.left_lv) / self.alv) * 10, 2)
+
+
+def mlr_calc(leaf: Leaf, terms: list[dict[str, any]]) -> float:
     result = 0
     for term in terms:
         ft = term.get("term")
         coef = term.get("coefficient")
         if ft == "l":
-            result += coef * length
+            result += coef * leaf.length
         elif ft == "l^2":
-            result += coef * length**2
+            result += coef * leaf.length**2
         elif ft == "w":
-            result += coef * width
+            result += coef * leaf.width
         elif ft == "w^2":
-            result += coef * width**2
+            result += coef * leaf.width**2
         elif ft == "alv":
-            result += coef * alv
+            result += coef * leaf.alv
         elif ft == "alv^2":
-            result += coef * alv**2
+            result += coef * leaf.alv**2
         elif ft == "constant":
             result += coef
         else:
@@ -65,11 +83,9 @@ class Citation:
         self.name = model_citation
         self.title = citation["title"]
         self.url = citation["url"]
-        self.pdf_file = self._get_pdf_path(citation["file"])
-    
+        self.pdf_file = self._get_pdf_path(citation["file"])    
 
     def _get_pdf_path(self, name: str) -> Path | None:
         if len(name) == 0:
             return None
         return BIBLIOGRAPHY_DIR / name
-    
