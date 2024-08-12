@@ -10,7 +10,7 @@
                             {"coefficient": -58.17, "term": "constant"}
                         ]
                     },
-                    "description": "Simple linear model using length and width",
+                    "description": "Simple linear model using leaf length",
                     "citation_cod": "tomazetti_et_al_2024"
                 }
             },
@@ -23,134 +23,1192 @@
                             {"coefficient": 7.84, "term": "constant"}
                         ]
                     },
-                    "description": "",
-                    "citation": "tomazetti_et_al_2024"
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
                 }
             },
             "leaf_width": {
-                "model": "0.99 * L * W + 2.76",
-                "description": "Simple linear model using length and width",
-                "citation_cod": "tomazetti_et_al_2024"
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 14.79 * W + - 62.36",
+                        "terms": [
+                            {"coefficient": 14.79, "term": "x"},
+                            {"coefficient": -62.36, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             },
             "leaf_width_square": {
-                "model": "",
-                "description": "",
-                "citation": "tomazetti_et_al_2024"
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.77 * W^2 + 3.95",
+                        "terms": [
+                            {"coefficient": 0.77, "term": "x"},
+                            {"coefficient": 3.95, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             },
             "leaf_lateral_veins": {
-                "model": "0.99 * L * W + 2.76",
-                "description": "Simple linear model using length and width",
-                "citation_cod": "tomazetti_et_al_2024"
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.49 * alv - 63.49",
+                        "terms": [
+                            {"coefficient": 20.49, "term": "x"},
+                            {"coefficient": -63.49, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             },
             "leaf_lateral_veins_square": {
-                "model": "",
-                "description": "",
-                "citation": "tomazetti_et_al_2024"
-            },"leaf_length_width": {
-                "model": "0.99 * L * W + 2.76",
-                "description": "Simple linear model using length and width",
-                "citation_cod": "tomazetti_et_al_2024"
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.45 * alv^2 + 4.43",
+                        "terms": [
+                            {"coefficient": 1.45, "term": "x"},
+                            {"coefficient": 4.43, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             },
-            "leaf_length_width_square": {
-                "model": "",
-                "description": "",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.99 * L * W + 2.76",
+                        "terms": [
+                            {"coefficient": 0.99, "term": "x"},
+                            {"coefficient": 2.76, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             },
             "leaf_mlr": {
-                "model": "",
-                "description": "",
-                "citation": "tomazetti_et_al_2024"
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0 * L^2 + 0 * W2 + 0 * alv^2 + 0",
+                        "terms": [
+                            {"coefficient": 0.314, "term": "l^2"},
+                            {"coefficient": 0.315, "term": "w^2"},
+                            {"coefficient": 0.555, "term": "alv^2"},
+                            {"coefficient": 1.591, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Baron": {
-            "model_1": {
-                "model": "0.24 * L^2 + 0.32 * W^2 + 0.47 * aLV^2 + 1.85",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 13.34 * L - 39.98",
+                        "terms": [
+                            {"coefficient": 13.34, "term": "x"},
+                            {"coefficient": -39.98, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.99 * L^2 + 1.59",
+                        "terms": [
+                            {"coefficient": 0.99, "term": "x^2"},
+                            {"coefficient": 1.59, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 11.11 * W - 36.48",
+                        "terms": [
+                            {"coefficient": 11.11, "term": "x"},
+                            {"coefficient": -36.48, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.73 * W^2 + 2.98",
+                        "terms": [
+                            {"coefficient": 0.73, "term": "x"},
+                            {"coefficient": 2.98, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 16.05 * alv - 41.20",
+                        "terms": [
+                            {"coefficient": 16.05, "term": "x"},
+                            {"coefficient": -41.20, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.43 * alv^2 + 0.59",
+                        "terms": [
+                            {"coefficient": 1.43, "term": "x"},
+                            {"coefficient": 0.59, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },"leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.89 * L * W + 0.41",
+                        "terms": [
+                            {"coefficient": 0.89, "term": "x"},
+                            {"coefficient": 0.41, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.237 * L^2 + 0.324 * W2 + 0.465 * alv^2 + 1.852",
+                        "terms": [
+                            {"coefficient": 0.237, "term": "l^2"},
+                            {"coefficient": 0.324, "term": "w^2"},
+                            {"coefficient": 0.465, "term": "alv^2"},
+                            {"coefficient": 1.852, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Bronner": {
-            "model_1": {
-                "model": "0.44 * L^2 + 0.30 * W^2 + 0.46 * aLV^2 + 0.12",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.58 * L - 73.29",
+                        "terms": [
+                            {"coefficient": 20.58, "term": "x"},
+                            {"coefficient": -73.29, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.27 * L^2 + 3.57",
+                        "terms": [
+                            {"coefficient": 1.27, "term": "x^2"},
+                            {"coefficient": 3.57, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 15.84 * W - 73.78",
+                        "terms": [
+                            {"coefficient": 15.84, "term": "x"},
+                            {"coefficient": -73.78, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.75 * W^2 + 4.21",
+                        "terms": [
+                            {"coefficient": 0.75, "term": "x"},
+                            {"coefficient": 4.21, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 24.19 * alv - 83.39",
+                        "terms": [
+                            {"coefficient": 24.19, "term": "x"},
+                            {"coefficient": -83.39, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.62 * alv^2 + 0.57",
+                        "terms": [
+                            {"coefficient": 1.62, "term": "x"},
+                            {"coefficient": 0.57, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.99 * L * W + 2.56",
+                        "terms": [
+                            {"coefficient": 0.99, "term": "x"},
+                            {"coefficient": 2.56, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.440 * L^2 + 0.297 * W2 + 0.463 * alv^2 + 0.116",
+                        "terms": [
+                            {"coefficient": 0.440, "term": "l^2"},
+                            {"coefficient": 0.297, "term": "w^2"},
+                            {"coefficient": 0.463, "term": "alv^2"},
+                            {"coefficient": 0.116, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Calandro":  {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 30.09 * L - 116.53",
+                        "terms": [
+                            {"coefficient": 30.09, "term": "x"},
+                            {"coefficient": -116.53, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.91 * L^2 - 7.11",
+                        "terms": [
+                            {"coefficient": 1.91, "term": "x^2"},
+                            {"coefficient": -7.11, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 19.49 * W - 105.9",
+                        "terms": [
+                            {"coefficient": 19.49, "term": "x"},
+                            {"coefficient": -105.9, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.82 * W^2 - 1.05",
+                        "terms": [
+                            {"coefficient": 0.82, "term": "x"},
+                            {"coefficient": -1.05, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 31.72 * alv - 122.50",
+                        "terms": [
+                            {"coefficient": 31.72, "term": "x"},
+                            {"coefficient": -122.50, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 2.05 * alv^2 - 9.49",
+                        "terms": [
+                            {"coefficient": 2.05, "term": "x"},
+                            {"coefficient": -9.49, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.27 * L * W - 5.84",
+                        "terms": [
+                            {"coefficient": 1.27, "term": "x"},
+                            {"coefficient": -5.84, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = -0.140 * L^2 + 0.469 * W2 + 0.994 * alv^2 - 4.240",
+                        "terms": [
+                            {"coefficient": -0.140, "term": "l^2"},
+                            {"coefficient": 0.469, "term": "w^2"},
+                            {"coefficient": 0.994, "term": "alv^2"},
+                            {"coefficient": -4.240, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Calardis Blanc": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.93 * L - 75.34",
+                        "terms": [
+                            {"coefficient": 20.93, "term": "x"},
+                            {"coefficient": -75.34, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.20 * L^2 + 4.77",
+                        "terms": [
+                            {"coefficient": 1.20, "term": "x^2"},
+                            {"coefficient": 4.77, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 16.29 * W - 81.69",
+                        "terms": [
+                            {"coefficient": 16.29, "term": "x"},
+                            {"coefficient": -81.69, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.75 * W^2 - 0.25",
+                        "terms": [
+                            {"coefficient": 0.75, "term": "x"},
+                            {"coefficient": -0.25, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 24.82 * alv - 80.52",
+                        "terms": [
+                            {"coefficient": 24.82, "term": "x"},
+                            {"coefficient": -80.52, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.71 * alv^2 + 0.65",
+                        "terms": [
+                            {"coefficient": 1.71, "term": "x"},
+                            {"coefficient": 0.65, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.00 * L * W - 0.52",
+                        "terms": [
+                            {"coefficient": 1, "term": "x"},
+                            {"coefficient": -0.52, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.192 * L^2 + 0.480 * W2 + 0.325 * alv^2 + 1.847",
+                        "terms": [
+                            {"coefficient": 0.192, "term": "l^2"},
+                            {"coefficient": 0.480, "term": "w^2"},
+                            {"coefficient": 0.325, "term": "alv^2"},
+                            {"coefficient": 1.847, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Felicia": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 18.07 * L - 82.77",
+                        "terms": [
+                            {"coefficient": 18.07, "term": "x"},
+                            {"coefficient": -82.77, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.89 * L^2 + 2.22",
+                        "terms": [
+                            {"coefficient": 0.89, "term": "x^2"},
+                            {"coefficient": 2.22, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 17.98 * W - 98.21",
+                        "terms": [
+                            {"coefficient": 17.98, "term": "x"},
+                            {"coefficient": -98.21, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.78 * W^2 - 1.91",
+                        "terms": [
+                            {"coefficient": 0.78, "term": "x"},
+                            {"coefficient": -1.91, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 26.08 * alv - 94.55",
+                        "terms": [
+                            {"coefficient": 26.08, "term": "x"},
+                            {"coefficient": -94.55, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.74 * alv^2 - 2.66",
+                        "terms": [
+                            {"coefficient": 1.74, "term": "x"},
+                            {"coefficient": -2.66, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.88 * L * W - 3.01",
+                        "terms": [
+                            {"coefficient": 0.88, "term": "x"},
+                            {"coefficient": -3.01, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.109 * L^2 + 0.434 * W2 + 0.577 * alv^2 - 2.793",
+                        "terms": [
+                            {"coefficient": 0.109, "term": "l^2"},
+                            {"coefficient": 0.434, "term": "w^2"},
+                            {"coefficient": 0.577, "term": "alv^2"},
+                            {"coefficient": -2.793, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "ABS15": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 24.09 * L - 92.95",
+                        "terms": [
+                            {"coefficient": 24.09, "term": "x"},
+                            {"coefficient": -92.95, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.48 * L^2 - 3.13",
+                        "terms": [
+                            {"coefficient": 1.48, "term": "x^2"},
+                            {"coefficient": -3.13, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 17.30 * W - 89.03",
+                        "terms": [
+                            {"coefficient": 17.3, "term": "x"},
+                            {"coefficient": -89.03, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.73 * W^2 + 3.88",
+                        "terms": [
+                            {"coefficient": 0.73, "term": "x"},
+                            {"coefficient": 3.88, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 27.98 * alv - 100.28",
+                        "terms": [
+                            {"coefficient": 27.98, "term": "x"},
+                            {"coefficient": -100.28, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.80 * alv^2 - 0.48",
+                        "terms": [
+                            {"coefficient": 1.8, "term": "x"},
+                            {"coefficient": -0.48, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.08 * L * W - 3.33",
+                        "terms": [
+                            {"coefficient": 1.08, "term": "x"},
+                            {"coefficient": -3.33, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.139 * L^2 + 0.336 * W2 + 0.803 * alv^2 + 2.770",
+                        "terms": [
+                            {"coefficient": 0.139, "term": "l^2"},
+                            {"coefficient": 0.336, "term": "w^2"},
+                            {"coefficient": 0.803, "term": "alv^2"},
+                            {"coefficient": 2.770, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "ABS24": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.72 * L - 93.80",
+                        "terms": [
+                            {"coefficient": 20.72, "term": "x"},
+                            {"coefficient": -93.80, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.04 * L^2 - 0.16",
+                        "terms": [
+                            {"coefficient": 1.04, "term": "x^2"},
+                            {"coefficient": -0.16, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 16.51 * W - 90.42",
+                        "terms": [
+                            {"coefficient": 16.51, "term": "x"},
+                            {"coefficient": -90.42, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.66 * W^2 + 2.96",
+                        "terms": [
+                            {"coefficient": 0.66, "term": "x"},
+                            {"coefficient": 2.96, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 23.81 * alv - 96.09",
+                        "terms": [
+                            {"coefficient": 23.81, "term": "x"},
+                            {"coefficient": -96.09, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.33 * alv^2 + 0.05",
+                        "terms": [
+                            {"coefficient": 1.33, "term": "x"},
+                            {"coefficient": 0.05, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.85 * L * W - 0.42",
+                        "terms": [
+                            {"coefficient": 0.85, "term": "x"},
+                            {"coefficient": -0.42, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.279 * L^2 + 0.285 * W2 + 0.414 * alv^2 - 0.167",
+                        "terms": [
+                            {"coefficient": 0.279, "term": "l^2"},
+                            {"coefficient": 0.285, "term": "w^2"},
+                            {"coefficient": 0.414, "term": "alv^2"},
+                            {"coefficient": -0.167, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Helios": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.78 * L - 64.95",
+                        "terms": [
+                            {"coefficient": 20.78, "term": "x"},
+                            {"coefficient": -64.95, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.41 * L^2 + 5.68",
+                        "terms": [
+                            {"coefficient": 1.41, "term": "x^2"},
+                            {"coefficient": 5.68, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 15.80 * W - 73.68",
+                        "terms": [
+                            {"coefficient": 15.8, "term": "x"},
+                            {"coefficient": -73.68, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.75 * W^2 + 4.40",
+                        "terms": [
+                            {"coefficient": 0.75, "term": "x"},
+                            {"coefficient": 4.4, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 25.10 * alv - 79.87",
+                        "terms": [
+                            {"coefficient": 25.1, "term": "x"},
+                            {"coefficient": -79.87, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.90 * alv^2 - 1.33",
+                        "terms": [
+                            {"coefficient": 1.9, "term": "x"},
+                            {"coefficient": -1.33, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.06 * L * W + 3.07",
+                        "terms": [
+                            {"coefficient": 1.06, "term": "x"},
+                            {"coefficient": 3.07, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.522 * L^2 + 0.248 * W2 + 0.587 * alv^2 + 1.205",
+                        "terms": [
+                            {"coefficient": 0.522, "term": "l^2"},
+                            {"coefficient": 0.248, "term": "w^2"},
+                            {"coefficient": 0.587, "term": "alv^2"},
+                            {"coefficient": 1.205, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Prior": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 20.89 * L - 78.65",
+                        "terms": [
+                            {"coefficient": 20.89, "term": "x"},
+                            {"coefficient": -78.65, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.18 * L^2 + 5.80",
+                        "terms": [
+                            {"coefficient": 1.18, "term": "x^2"},
+                            {"coefficient": 5.8, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 17.83 * W - 79.35",
+                        "terms": [
+                            {"coefficient": 17.83, "term": "x"},
+                            {"coefficient": -79.35, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.84 * W^2 + 6.71",
+                        "terms": [
+                            {"coefficient": 0.84, "term": "x"},
+                            {"coefficient": 6.71, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 25.22 * alv - 86.49",
+                        "terms": [
+                            {"coefficient": 25.22, "term": "x"},
+                            {"coefficient": -86.49, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.65 * alv^2 + 2.63",
+                        "terms": [
+                            {"coefficient": 1.65, "term": "x"},
+                            {"coefficient": 2.63, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.05 * L * W + 3.60",
+                        "terms": [
+                            {"coefficient": 1.05, "term": "x"},
+                            {"coefficient": 3.6, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.211 * L^2 + 0.378 * W2 + 0.669 * alv^2 + 4.997",
+                        "terms": [
+                            {"coefficient": 0.211, "term": "l^2"},
+                            {"coefficient": 0.378, "term": "w^2"},
+                            {"coefficient": 0.669, "term": "alv^2"},
+                            {"coefficient": 4.997, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "Regent": {
-            "model_1": {
-                "model": "",
-                "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": "tomazetti_et_al_2024"
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 21.52 * L - 75.17",
+                        "terms": [
+                            {"coefficient": 21.52, "term": "x"},
+                            {"coefficient": -75.17, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.35 * L^2 + 2.60",
+                        "terms": [
+                            {"coefficient": 1.35, "term": "x^2"},
+                            {"coefficient": 2.6, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 15.90 * W - 77.19",
+                        "terms": [
+                            {"coefficient": 15.9, "term": "x"},
+                            {"coefficient": -77.19, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_width_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.73 * W^2 + 3.38",
+                        "terms": [
+                            {"coefficient": 0.73, "term": "x"},
+                            {"coefficient": 3.38, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf width square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 24.78 * alv - 86.05",
+                        "terms": [
+                            {"coefficient": 24.78, "term": "x"},
+                            {"coefficient": -86.05, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_lateral_veins_square": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.67 * alv^2 - 1.13",
+                        "terms": [
+                            {"coefficient": 1.67, "term": "x"},
+                            {"coefficient": -1.13, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf lateral veins square",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_length_width": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 1.05 * L * W - 1.75",
+                        "terms": [
+                            {"coefficient": 1.05, "term": "x"},
+                            {"coefficient": -1.75, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length x width",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
+            },
+            "leaf_mlr": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0.106 * L^2 + 0.395 * W2 + 0.769 * alv^2 - 4.151",
+                        "terms": [
+                            {"coefficient": 0.106, "term": "l^2"},
+                            {"coefficient": 0.395, "term": "w^2"},
+                            {"coefficient": 0.769, "term": "alv^2"},
+                            {"coefficient": -4.151, "term": "constant"}
+                        ]
+                    },
+                    "description": "Multiple linear model using length, width, and average lateral vein length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         }
     },
     "apple (Malus domestica)": {
         "variety_a": {
-            "model_1": {
-                "model": "",
-                "description": "Simple linear model using length and width",
-                "citation": ""
-            },
-            "model_2": {
-                "model": "",
-                "description": "",
-                "citation": ""
+            "leaf_length": {
+                "model_1": {
+                    "model": {
+                        "formula": "LA = 0 * L + 0",
+                        "terms": [
+                            {"coefficient": 0, "term": "x"},
+                            {"coefficient": 0, "term": "constant"}
+                        ]
+                    },
+                    "description": "Simple linear model using leaf length",
+                    "citation_cod": "tomazetti_et_al_2024"
+                }
             }
         },
         "variety_b": {
             "model_1": {
                 "model": "",
                 "description": "Multiple linear model using length, width, and average lateral vein length",
-                "citation": ""
+                "citation_cod": ""
             }
         }
     }

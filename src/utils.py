@@ -33,6 +33,31 @@ def calculate_leaf_area(value: float, terms: list[dict[str, any]]) -> float:
     return round(result, 2) if result > 0 else 0
 
 
+def mlr_calc(length: float, width: float, lv_right: float, lv_left: float, terms: list[dict[str, any]]) -> float:
+    alv = (lv_right + lv_left) / 2
+    result = 0
+    for term in terms:
+        ft = term.get("term")
+        coef = term.get("coefficient")
+        if ft == "l":
+            result += coef * length
+        elif ft == "l^2":
+            result += coef * length**2
+        elif ft == "w":
+            result += coef * width
+        elif ft == "w^2":
+            result += coef * width**2
+        elif ft == "alv":
+            result += coef * alv
+        elif ft == "alv^2":
+            result += coef * alv**2
+        elif ft == "constant":
+            result += coef
+        else:
+            raise ValueError(f"coefficient {term} not valid")
+    return round(result, 2) if result > 0 else 0
+
+
 class Citation:
     def __init__(self, model_citation: str) -> None:
         bibliography = load_bibliography_info()
